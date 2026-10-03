@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Här kan modellflygklubbar anmäla sina event till Modellflygets dag. Syns på besökskartan och locka fler besökare till din klubb!">
+  <title>Modellflygets dag - Registrering</title>
+  <link rel="canonical" href="https://aktivtmodellflyg.github.io/www/mfd/mfd_registrera.html">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin="">
+  <style> #map { height: 400px; background: #eee; } </style>
+
+</head>
+<body>
+
+  <!-- Meny -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
+    <div class="container">
+      <a class="navbar-brand p-0" href="../index.html"><img src="../images/amf_90x90.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+		  
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modellflyg
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" href="../mf/mf.html">Detta är modellflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/unga.html">Unga</a>
+            <a class="dropdown-item" href="../mf/avancera.html">Avancera</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mfd/mfd.html">Modellflygets dag</a>
+            <a class="dropdown-item" href="../mf/kalender.html">Kalender</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Börja
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="../borja/borja.html">Hur man börjar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/skolflyg_karta.html">Prova-på & Skolflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/radio.html">Radio</a>
+            <a class="dropdown-item" href="../borja/modell_wing.html">Flygplan</a>
+            <a class="dropdown-item" href="../borja/laddare.html">Laddare</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/butiker.html">Butiker</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Utbildning
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="../utb/regler.html">Regler</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
+            <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
+            <a class="dropdown-item" href="../utb/tips.html">Byggtips</a>
+            <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../update/spektrum.html">Uppdatera Spektrum</a>
+          </div>
+          </li>
+
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          EslövsMFK
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="../eslov/index.html">Flyga idag ?</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../eslov/medlem.html">Bli medlem & pilot</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../eslov/omrade.html">Skolflyg Flygområde</a>
+          </div>
+          </li>
+		  
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Innehåll -->
+  <main class="container py-4">
+    <h1 class="h2">Modellflygets dag för klubbar och arrangörer</h1>
+    <p>
+	  Genom att <b>instifta en nationell temadag</b> – Modellflygets dag – får klubbar över hela landet möjlighet att visa upp sin verksamhet och förhoppningsvis värva nya medlemmar.
+	  Varje klubb väljer själv hur och vad man vill göra den dagen. Det viktigaste är att delta med något, hellre enkelt än stort som inte blir av.
+	  Dagen skapar också en viktig och positiv motvikt i media till alla larmrapporter om drönare. Vi vill visa att det finns ett organiserat och säkert modellflyg som förenar människor i alla åldrar.
+	  <br><b>Syns man inte, finns man inte – och allt börjar någonstans.</b>
+	</p>
+<!--
+	<p>
+	  ** <i class="amf">Vi vill visa vår support för initiativet men kan inte delta själva 2026</i>
+	      <br>Skriv <b>!Prel</b> före klubbnamnet vid registrering så visas namnet i support listan.
+     <br>** <i class="amf">Vi deltar som gäst denna dag hos en annan klubb och vill synas med eget klubbnamn</i>
+		  <br>Skriv <b>!Gäst</b> före klubbnamnet och lägg in GPS koordinaterna i närheten av klubben ni gästar så ser man att ni hjälper varandra.
+	</p>
+-->
+
+	<h2 class="h3"><b>Registrering</b> - för att synas som deltagande klubb - visa support för initiativet</h2>
+	<p>Zooma in och klicka på registreringskartan nedan för att markera var besökare ska köra **.
+	</p>
+	<ol>
+	  <li>Klicka på kartan så visas en popup-ruta.</li>
+	  <li>Klicka på registreringslänken och fyll i formuläret <i>(gratis men måste göras från ett Google konto)</i>.</li> 
+	  <li>Efter några minuter ska er klubb synas på besökskartan <i>(registreringskartan nedan uppdateras inte)</i>.</li>
+	  <li>Kontrollera att er länk fungerar genom att klicka på er klubb i besökskartan och därefter på länken till er hemsida.</li> 
+	</ol>
+	
+	<div class="container-fluid mt-3">
+	  <div id="map" style="height: 500px; border-radius: 8px;"></div>
+    </div>
+
+	<h2 class="h3">Inför dagen</h2>
+	<ul>
+	  <li>Gå gärna med <b>Facebook grupp för klubbar och arrangörer</b> där ni kan <b>dela idéer</b> och erfarenheter. <a href="https://www.facebook.com/groups/modellflygetsdag" onclick="sa_event('AMF_mfd_FB')" target="_blank" rel="noopener noreferrer">https://www.facebook.com/groups/modellflygetsdag</a> (Öppnas i nytt fönster)
+	  </li>
+<!--
+	  <li>Glöm inte att det <b>finns material</b> som kan användas i samband med Modellflygets dag. <a href="../download/dl_mfd.html">Gå till 'Ladda ned - För klubbar'</a></li>
+-->
+	  <li>Ta gärna lite foton och under dagen. Om <b>arrangemanget blev lyckat</b> kanske ni vill dela bild och en text på Aktivt Modellflygs hemsida. Visa upp er och locka fler klubbar till kommande år.</li>
+	  <li>Om ni <b>annonserar</b> Modellflygets dag, får ni gärna även ta med länken <b>https://aktivtmodellflyg.github.io/www</b> eller <b>https://aktivtmodellflyg.github.io/www/mfd/mfd.html</b>.
+			<br>Då kan personer som ser er annonsering men bor för långt bort enkelt hitta ett annat arrangemang i närheten.
+			En ny medlem – oavsett var i landet – är en <b>vinst för hela vår hobby</b>.
+	  </li>
+	</ul>
+
+	<p>
+      <a href="mfd_karta.html">Tillbaka till 'besökskartan'</a>
+	</p>
+
+
+    <hr>
+	<h2 class="h3">Problem - Support - Hjälp</h2>
+    <ul>
+<!--
+	  <li><b>Registreringskartan fungerade inte</b> för mig. Jag känner till GPS koordinaterna och vill registrera manuellt. <a id="formURL" href="https://docs.google.com/forms/d/e/1FAIpQLSdaQqoCmabO5b1xHpKw-UADu_Mux_JqiJfsmPDw5tdsAmfqFw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Manuell registrering</a> (Öppnas i ett nytt fönster)</li>
+-->
+      <li>Jag skrev in <b>fel uppgifter</b> i formuläret. Du har fått ett e-postmeddelande med en länk där du kan ändra dina uppgifter.</li>
+	  <li>Jag har markerat <b>fel plats</b> på kartan. Klicka på registreringskartan ovan igen och skriv ned koordinaterna (klicka <b>inte</b> på registreringslänken). Ändra sedan koordinaterna via länken i e-postmeddelandet.</li>
+	  <li>Vi <b>har ingen hemsida</b>. Om ni använder annat media, t.ex. Facebook, kan ni ange den URL:en istället. Exempel: https://www.facebook.com/EslovsMFK </li>
+<!--
+      <li>Vi vill <b>visa mer information</b> om dagens program och aktiviteter. Lägg informationen på er egen hemsida och ändra URL:en i formuläret så länken pekar direkt till den sidan. Det gör det enklare för besökare att hitta rätt information.</li>
+-->
+<!--
+	  <li>Vår klubb finns <b>inte</b> alls <b>på nätet</b> men vill synas för denna dag. En enkel lösning är att låna en sida här.
+ 	      <br>Se exempel på sida. <a href="mfd_klubb.html?id=1" target="_blank" rel="noopener noreferrer">Exempel på enkel sida</a> (Öppnas i ett nytt fönster)
+		  <br>Instruktionen för en sådan sida. <a href="mfd_klubb.html" target="_blank" rel="noopener noreferrer">Instruktion</a> (Öppnas i ett nytt fönster)
+	  </li>
+-->
+	  <li><b>Jag vill ta bort min klubb</b>. Ändra klubbnamnet, med länken i ditt e-postmeddelande, och lägg till order !DEL först. Då syns den inte på kartan. Exempel: !DEL MinRC-MFK. Vi radera i databasen senare.</li>
+	</ul>
+
+
+<!--
+	<p>
+	  <i class="amf">Allt arbete med Modellflygets dag sker ideellt på fritiden, och alla kostnader för licenser och hemsida täcks av privata medel utan avgifter för klubbarna. Vi välkomnar feedback, men ber om förståelse för att vi driver detta av ren entusiasm – håll därför gärna en positiv god ton i din kommunikation.</i>
+	</p>
+-->
+	
+  </main>
+
+  <footer class="bg-secondary text-white text-center py-3 mt-4">
+	  <div class="container">
+		<a href="../kontakt.html" class="text-white fw-bold text-decoration-none">Kontakt och policy</a>
+		<span class="mx-2">|</span>
+		<span>Vi ska ha kul tillsammans – En aktiv hobby i luften</span>
+	  </div>
+  </footer>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	 crossorigin=""></script>
+	 
+	<script>
+		var map = L.map('map').setView([61.0, 15.0], 5);
+			
+		document.addEventListener("DOMContentLoaded", function () {
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; OpenStreetMap bidragsgivare'
+			}).addTo(map);
+			
+		    map.on('click', onMapClick);
+		});
+		
+		
+		function onMapClick(e) {
+		  var lat = e.latlng.lat.toFixed(5);
+		  var lng = e.latlng.lng.toFixed(5);
+		  
+		  var formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdaQqoCmabO5b1xHpKw-UADu_Mux_JqiJfsmPDw5tdsAmfqFw/viewform?usp=pp_url&entry.405883927=" +lat + "&entry.475131248=" + lng;
+
+ 		  var popupContent = "<b>Koordinater:</b> " + lat + ", " + lng + "<br><br>" +
+                       "<a href='" + formUrl + "' target='_blank'>Registrera klubbaktivitet här</a><br>(Öppnas i ett nytt fönster)";
+    
+          L.popup().setLatLng(e.latlng).setContent(popupContent).openOn(map);
+        }
+	</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 100% privacy-first analytics -->
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js" data-collect-events="true"></script>
+</body>
+</html>
