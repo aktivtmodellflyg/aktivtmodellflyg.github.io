@@ -195,14 +195,16 @@
 						if (row.ID && row.Klubb && row.Plats && row.Datum && row.Lat && row.Lng) {
 						    let info = `<b>Klubb:</b> ${row.Klubb}<br>`;
 							
-							info += `<b>Plats:</b> ${row.Plats}<br>`
+							info += `<b>Plats:</b> ${row.Plats}<br>`;
 							
 							// Skapa markör på kartan
 							
 							if( row.Typ == "2" ){
 							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: indoorIcon}).addTo(map);
+							  info += `<b>Typ: Inomhushall</b><br>`;
 							}else{
 							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: fieldIcon}).addTo(map);
+							  info += `<b>Typ: Flygfält utomhus</b><br>`;
                             }
 							
 							if (row.Info && row.Info.trim() != ""){
