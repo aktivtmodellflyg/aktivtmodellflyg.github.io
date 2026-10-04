@@ -122,7 +122,7 @@
 	  När du har hittat en plats i din närhet, sök vidare på nätet eller Facebook för att hitta mer information.
 	  Tänk på att alla platser inte är öppna för allmänheten och att vissa ligger på privat mark, så ta alltid kontakt med klubben innan ditt besök.
 	
-	  <b>Klicka på en plats i kartan för att få namn på plats och klubb.</b>
+	  <b>Klicka på en plats i kartan för att få namn på plats och klubb. (POI med Grön cirkel är utomhus/fält, Vit är Vinter/inomhushall</b>
 	</p>
 	
 	<p class="amf">
@@ -166,6 +166,13 @@
 			  iconAnchor: [15, 42],
 			  popupAnchor: [0, -38]
 			});
+
+			const fieldIcon = L.icon({
+			  iconUrl: 'images/marker_field.svg',
+			  iconSize: [30, 42],
+			  iconAnchor: [15, 42],
+			  popupAnchor: [0, -38]
+			});
 			
 		    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> bidragsgivare'
@@ -195,7 +202,7 @@
 							if( row.Typ == "2" ){
 							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: indoorIcon}).addTo(map);
 							}else{
-							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
+							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: fieldIcon}).addTo(map);
                             }
 							
 							if (row.Info && row.Info.trim() != ""){
