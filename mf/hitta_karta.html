@@ -224,7 +224,6 @@
 							}else if( row.Typ == "1"){
 							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: fieldIcon}).addTo(map);
 							  info += `<b>Typ:</b> Flygfält utomhus<br>`;
-                            }
 							}else{
 							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: errorIcon}).addTo(map);
 							  info += `<b>Typ:</b> Error<br>`;
