@@ -183,6 +183,13 @@
 			  iconAnchor: [15, 42],
 			  popupAnchor: [0, -38]
 			});
+
+			const errorIcon = L.icon({
+			  iconUrl: 'images/marker_error.svg',
+			  iconSize: [30, 42],
+			  iconAnchor: [15, 42],
+			  popupAnchor: [0, -38]
+			});
 			
 		    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> bidragsgivare'
@@ -214,9 +221,13 @@
 							}else if( row.Typ == "3" ){
 							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: privateIcon}).addTo(map);
 							  info += `<b>Typ:</b> Privatflygfält eller privatmark<br>`;
-							}else{
+							}else if( row.Typ == "1"){
 							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: fieldIcon}).addTo(map);
 							  info += `<b>Typ:</b> Flygfält utomhus<br>`;
+                            }
+							}else{
+							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: errorIcon}).addTo(map);
+							  info += `<b>Typ:</b> Error<br>`;
                             }
 
 							info += `<b>Plats:</b> ${row.Plats}<br>`;
