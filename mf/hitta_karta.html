@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Skolflyg en kartar till klubbar med aktivt skolflyg och prova-på">
-  <title>Skolflyg - Hitta till en klubb med skolflyg och prova-på</title>
+  <meta name="description" content="Karta till platser som är aktiva med modellflyg">
+  <title>Verksamt - Hitta till plats med aktivitet</title>
   <link rel="canonical" href="https://aktivtmodellflyg.github.io/www/mf/hitta_karta.html">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
@@ -115,9 +115,18 @@
 
   <!-- Innehåll -->
   <main class="container py-4">
-    <h1 class="h2">Hitta till platser med modellflyg</h1>
+    <h1 class="h2">Intressanta platser med modellflyg</h1>
     <p>
-	  Klicka på en plats för mer information.
+	  Kartan visar platser där det finns någon form av modellflyg.
+	  Den är till för att hjälpa dig att hitta rätt i vår trevliga hobby.
+	  När du har hittat en plats i din närhet, sök vidare på nätet eller Facebook för att hitta mer information.
+	  Tänk på att alla platser inte är öppna för allmänheten och att vissa ligger på privat mark, så ta alltid kontakt med klubben innan ditt besök.
+	
+	  <b>Klicka på en plats i kartan för att få namn på plats och klubb.</b>
+	</p>
+	
+	<p class="amf">
+	  Hittar du något fel eller vill att vi tar bort din klubb från kartan? Kontakta oss och ange gärna det ID-nummer som syns när man klickar på platsen.
 	</p>
 	
     <div id="map" class="mt-3 mb-3" style="height: calc(90vh - 150px); border-radius: 8px;"></div>
@@ -187,7 +196,7 @@
 						}
 						else
 						{
-							var nyRad = `<div class="list-group-item list-group-item-action text-danger"><b>ID${row.ID}</b> Klubb:${row.Klubb} Plats:${row.Plats} Lat:${row.Lat} Lng:${row.Lng}</div>`;
+							var nyRad = `<div class="list-group-item list-group-item-action text-danger"><b>ID${row.ID} Klubb:</b>${row.Klubb} <b>Plats:</b>${row.Plats} <b>Lat:</b>${row.Lat} <b>Lng:</b>${row.Lng}</div>`;
 										 
 							errorListan.innerHTML += nyRad;
 						}
