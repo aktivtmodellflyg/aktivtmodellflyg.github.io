@@ -157,7 +157,6 @@
 			}).addTo(map);
 		
 		
-		    const errorListan = document.getElementById('klubb-lista');
 			
 			var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTNmPfEWyG_Mxg3edBX0HwxrD1ZfwvZvaDDh3nUPcmTy0fAoVUaJwzchXZQN_5U3SmHOYg0_XxtiP86/pub?gid=1220404349&single=true&output=csv';
 
@@ -166,6 +165,7 @@
 				header: true,
 				complete: function(results) {
 					var data = results.data;
+					const errorListan = document.getElementById('klubb-lista');
 					
 					data.forEach(function(row) {
 
