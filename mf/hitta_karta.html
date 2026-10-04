@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Skolflyg en kartar till klubbar med aktivt skolflyg och prova-på">
+  <title>Skolflyg - Hitta till en klubb med skolflyg och prova-på</title>
+  <link rel="canonical" href="https://aktivtmodellflyg.github.io/www/mf/hitta_karta.html">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  
+    <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin="">
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+   <style> #map {
+     height: 600px; background: #eee;
+     }
+   
+    /* Fixar de vita strecken/gliporna mellan kartbitarna i Leaflet */
+    .leaflet-tile-container img {
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+        outline: 1px solid transparent;
+        image-rendering: -webkit-optimize-contrast;
+    }
+   </style>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+</head>
+<body>
+
+  <!-- Meny -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
+    <div class="container">
+      <a class="navbar-brand p-0" href="../index.html"><img src="../images/amf_90x90.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+		  
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modellflyg
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" href="../mf/mf.html">Detta är modellflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/unga.html">Unga</a>
+            <a class="dropdown-item" href="../mf/avancera.html">Avancera</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mfd/mfd.html">Modellflygets dag</a>
+            <a class="dropdown-item" href="../mf/kalender.html">Kalender</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Börja
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="../borja/borja.html">Hur man börjar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/skolflyg_karta.html">Prova-på & Skolflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/radio.html">Radio</a>
+            <a class="dropdown-item" href="../borja/modell_wing.html">Flygplan</a>
+            <a class="dropdown-item" href="../borja/laddare.html">Laddare</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/butiker.html">Butiker</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Utbildning
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="../utb/regler.html">Regler</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
+            <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
+            <a class="dropdown-item" href="../utb/tips.html">Byggtips</a>
+            <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../update/spektrum.html">Uppdatera Spektrum</a>
+          </div>
+          </li>
+
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          EslövsMFK
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="../eslov/index.html">Flyga idag ?</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../eslov/medlem.html">Bli medlem & pilot</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../eslov/omrade.html">Skolflyg Flygområde</a>
+          </div>
+          </li>
+		  
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Innehåll -->
+  <main class="container py-4">
+    <h1 class="h2">Hitta till platser med modellflyg</h1>
+    <p>
+	  Klicka på en plats för mer information.
+	</p>
+	
+    <div id="map" class="mt-3 mb-3" style="height: calc(90vh - 150px); border-radius: 8px;"></div>
+
+
+  </main>
+
+  <footer class="bg-secondary text-white text-center py-3 mt-4">
+	  <div class="container">
+		<a href="../kontakt.html" class="text-white fw-bold text-decoration-none">Kontakt och policy</a>
+		<span class="mx-2">|</span>
+		<span>Vi ska ha kul tillsammans – En aktiv hobby i luften</span>
+	  </div>
+  </footer>
+
+	 
+	<script>
+		function escapeHtml(text) {
+			const div = document.createElement('div');
+			div.textContent = text || '';
+			return div.innerHTML;
+		}
+
+
+	    document.addEventListener("DOMContentLoaded", function () {
+			var map = L.map('map').setView([61.0, 15.0], 5);
+			
+		    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> bidragsgivare'
+				,crossOrigin: true
+			}).addTo(map);
+		
+		
+		    const errorListan = document.getElementById('klubb-lista');
+			
+			var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTNmPfEWyG_Mxg3edBX0HwxrD1ZfwvZvaDDh3nUPcmTy0fAoVUaJwzchXZQN_5U3SmHOYg0_XxtiP86/pub?gid=1220404349&single=true&output=csv';
+
+			Papa.parse(csvUrl, {
+				download: true,
+				header: true,
+				complete: function(results) {
+					var data = results.data;
+					
+					data.forEach(function(row) {
+
+						if (row.ID && row.Klubb && row.Plats && row.Datum && row.Lat && row.Lng) {
+						    let info = `<b>Klubb:</b> ${row.Klubb}<br>`;
+							
+							info += `<b>Plats:</b> ${row.Plats}<br>`
+							
+							// Skapa markör på kartan
+							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
+
+							if (row.Info && row.Info.trim() != ""){
+							  info += `<br><span style="white-space: pre-line;">${escapeHtml(row.Info.trim())}</span><br>`;
+							}
+
+ 						    info += `<hr><small>ID${row.ID} Senast uppdaterad: ${escapeHtml(row.Datum)}</small>`;
+							
+ 							marker.bindPopup(info);
+						}
+						else
+						{
+							var nyRad = `<div class="list-group-item list-group-item-action text-danger"><b>${row.Klubb}-${row.Plats}</b> - Något i information är felaktig eller gått ut</div>`;
+										 
+							errorListan.innerHTML += nyRad;
+						}
+					});
+
+					// Tvinga Leaflet att räkna om kartans nya storlek och rita om sig perfekt
+					setTimeout(function() {
+						map.invalidateSize();
+					}, 200);
+
+				}
+			});
+
+
+		});
+	</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 100% privacy-first analytics -->
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js" data-collect-events="true"></script>
+</body>
+</html>
