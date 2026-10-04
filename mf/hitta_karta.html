@@ -134,7 +134,7 @@
 	<hr>
     <div class="list-group" id="klubb-lista" style="overflow-y: auto;">
 	  <div class="list-group-item">
-	    Syns man i listan nedan men är någon data fel
+	    Syns man i listan nedan saknas någon data för kunna visa på kartan
 	  </div>
 	</div>
 
@@ -159,6 +159,13 @@
 
 	    document.addEventListener("DOMContentLoaded", function () {
 			var map = L.map('map').setView([61.0, 15.0], 5);
+
+			const indoorIcon = L.icon({
+			  iconUrl: 'images/marker_indoor.svg',
+			  iconSize: [30, 42],
+			  iconAnchor: [15, 42],
+			  popupAnchor: [0, -38]
+			});
 			
 		    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> bidragsgivare'
@@ -184,8 +191,13 @@
 							info += `<b>Plats:</b> ${row.Plats}<br>`
 							
 							// Skapa markör på kartan
-							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
-
+							
+							if( row.Typ == "2" ){
+							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: indoorIcon}).addTo(map);
+							}else{
+							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
+                            }
+							
 							if (row.Info && row.Info.trim() != ""){
 							  info += `<br><span style="white-space: pre-line;">${escapeHtml(row.Info.trim())}</span><br>`;
 							}
