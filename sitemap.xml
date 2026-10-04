@@ -3,147 +3,133 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/index.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/index.html</loc>
+       <lastmod>2026-10-04T16:10:13+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/mf/mf.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/mf/mf.html</loc>
+       <lastmod>2026-10-04T16:10:13+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/mf/unga.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/mf/unga.html</loc>
+       <lastmod>2026-10-04T16:10:13+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/mf/avancera.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/mf/avancera.html</loc>
+       <lastmod>2026-10-04T16:10:13+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/mfd/mfd.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/mfd/mfd.html</loc>
+       <lastmod>2026-10-04T16:10:13+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/mf/kalender.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/mf/kalender.html</loc>
+       <lastmod>2026-10-04T16:10:13+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/borja/borja.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/borja/borja.html</loc>
+       <lastmod>2026-10-04T16:10:13+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/borja/skolflyg_karta.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/borja/skolflyg_karta.html</loc>
+       <lastmod>2026-10-04T16:10:13+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/borja/radio.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/utb/prova.html</loc>
+       <lastmod>2026-10-04T16:10:13+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/borja/modell_wing.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/borja/radio.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/borja/laddare.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/borja/modell_wing.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/borja/butiker.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/borja/laddare.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/utb/regler.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/borja/butiker.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/utb/basic_plane.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/utb/regler.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/utb/radio_setup.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/utb/basic_plane.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/utb/tips.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/utb/radio_setup.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/utb/checklist.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/utb/tips.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/update/spektrum.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/utb/checklist.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/eslov/index.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/update/spektrum.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/eslov/medlem.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/eslov/index.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/eslov/omrade.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/eslov/medlem.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/mfd/mfd_2026.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/eslov/omrade.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/kontakt.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/mfd/mfd_2026.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://aktivtmodellflyg.github.io/www/mfd/mfd_karta.html</loc>
-       <lastmod>2026-08-30T13:02:41+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <loc>https://aktivtmodellflyg.github.io/kontakt.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://aktivtmodellflyg.github.io/mfd/mfd_karta.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://aktivtmodellflyg.github.io/mfd/mfd_registrera.html</loc>
+       <lastmod>2026-10-04T16:08:11+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
 </urlset>
