@@ -164,7 +164,6 @@
 			}).addTo(map);
 		
 		
-		    const errorListan = document.getElementById('klubb-lista');
 			
 			var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT9spgzIOo-mzkgSBOu0nET2lPaETA5ZAXFmkQvkIdbx4jvAnouEm9Ie_CFNY7NLzAmHQgx80aH7FcE/pub?gid=1543870574&single=true&output=csv';
 
@@ -173,6 +172,7 @@
 				header: true,
 				complete: function(results) {
 					var data = results.data;
+					const errorListan = document.getElementById('klubb-lista');
 					var nu = new Date();
 					
   				    var idagInt = parseInt(nu.toISOString().slice(0,10).replace(/-/g, ""), 10);
