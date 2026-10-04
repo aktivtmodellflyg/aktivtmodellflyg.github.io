@@ -125,7 +125,8 @@
 	  Tänk på att alla platser inte är öppna för allmänheten och att vissa ligger på privat mark, så ta alltid kontakt med klubben innan ditt besök.
 	
 	  <b>Klicka på i kartan för att få mer info.</b>
-	  <img src="images/marker_field.svg" alt="POI Utomhusfält"> Utomhusflygfält
+	  <img src="images/marker_field.svg" alt="POI Utomhusfält"> Utomhusflygfält (Artikel 16)
+	  <img src="images/marker_drone.svg" alt="POI Utomhusfält"> Utomhusflygfält (Drönarkort)
 	  <img src="images/marker_indoor.svg" alt="POI Inomhushall"> Inomhusflyghall
 	  <img src="images/marker_private.svg" alt="POI Privatfält"> Privatflygfält/mark
 	</p>
@@ -186,6 +187,13 @@
 			  popupAnchor: [0, -38]
 			});
 
+			const droneIcon = L.icon({
+			  iconUrl: 'images/marker_drone.svg',
+			  iconSize: [30, 42],
+			  iconAnchor: [15, 42],
+			  popupAnchor: [0, -38]
+			});
+
 			const errorIcon = L.icon({
 			  iconUrl: 'images/marker_error.svg',
 			  iconSize: [30, 42],
@@ -225,7 +233,10 @@
 							  info += `<b>Typ:</b> Privatflygfält eller privatmark<br>`;
 							}else if( row.Typ == "1"){
 							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: fieldIcon}).addTo(map);
-							  info += `<b>Typ:</b> Flygfält utomhus<br>`;
+							  info += `<b>Typ:</b> Flygfält utomhus (Artikel 16)<br>`;
+							}else if( row.Typ == "4"){
+							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: droneIcon}).addTo(map);
+							  info += `<b>Typ:</b>Utomhus, drönarkort krävs<br>`;
 							}else{
 							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: errorIcon}).addTo(map);
 							  info += `<b>Typ:</b> Error<br>`;
