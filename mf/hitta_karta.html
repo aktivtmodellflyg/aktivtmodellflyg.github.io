@@ -181,13 +181,13 @@
 							  info += `<br><span style="white-space: pre-line;">${escapeHtml(row.Info.trim())}</span><br>`;
 							}
 
- 						    info += `<hr><small>ID${row.ID} Senast uppdaterad: ${escapeHtml(row.Datum)}</small>`;
+ 						    info += `<hr><small><b>ID${row.ID}</b> - Senast uppdaterad: ${escapeHtml(row.Datum)}</small>`;
 							
  							marker.bindPopup(info);
 						}
 						else
 						{
-							var nyRad = `<div class="list-group-item list-group-item-action text-danger"><b>${row.Klubb}-${row.Plats}</b> - Något i information är felaktig eller gått ut</div>`;
+							var nyRad = `<div class="list-group-item list-group-item-action text-danger"><b>ID${row.ID}</b> Klubb:${row.Klubb} Plats:${row.Plats} Lat:${row.Lat} Lng:${row.Lng}</div>`;
 										 
 							errorListan.innerHTML += nyRad;
 						}
