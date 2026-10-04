@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /www/test/
-Disallow: /www/download/dl/
-Disallow: /www/mfd/klubb/
-Sitemap: https://aktivtmodellflyg.github.io/www/sitemap.xml
+Disallow: /test/
+Disallow: /download/dl/
+Disallow: /mfd/klubb/
+Sitemap: https://aktivtmodellflyg.github.io/sitemap.xml
