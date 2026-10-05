@@ -222,23 +222,25 @@
 						if (row.ID && row.Klubb && row.Plats && row.Datum && row.Lat && row.Lng) {
 						    let info = `<b>Klubb:</b> ${row.Klubb}<br>`;
 							
-							
+							var lat = parseFloat(String(row.Lat).replace(',', '.'));
+							var lng = parseFloat(String(row.Lng).replace(',', '.'));
+
 							// Skapa markör på kartan
 							
 							if( row.Typ == "2" ){
-							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: indoorIcon}).addTo(map);
+							  var marker = L.marker([lat, lng], {icon: indoorIcon}).addTo(map);
 							  info += `<b>Typ:</b> Inomhushall<br>`;
 							}else if( row.Typ == "3" ){
-							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: privateIcon}).addTo(map);
+							  var marker = L.marker([lat, lng)], {icon: privateIcon}).addTo(map);
 							  info += `<b>Typ:</b> Privatflygfält eller privatmark<br>`;
 							}else if( row.Typ == "1"){
-							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: fieldIcon}).addTo(map);
+							  var marker = L.marker([lat, lng], {icon: fieldIcon}).addTo(map);
 							  info += `<b>Typ:</b> Flygfält utomhus (Artikel 16)<br>`;
 							}else if( row.Typ == "4"){
-							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: droneIcon}).addTo(map);
+							  var marker = L.marker([lat, lng], {icon: droneIcon}).addTo(map);
 							  info += `<b>Typ:</b>Utomhus, drönarkort krävs<br>`;
 							}else{
-							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: errorIcon}).addTo(map);
+							  var marker = L.marker([lat, lng], {icon: errorIcon}).addTo(map);
 							  info += `<b>Typ:</b> Error<br>`;
                             }
 
