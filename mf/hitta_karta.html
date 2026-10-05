@@ -219,7 +219,7 @@
 					
 					data.forEach(function(row) {
 
-						if (row.ID && row.Klubb && row.Plats && row.Datum && row.Lat && row.Lng) {
+						if (row.ID && row.Typ && row.Klubb && row.Plats && row.Datum && row.Lat && row.Lng) {
 						    let info = `<b>Klubb:</b> ${row.Klubb}<br>`;
 							
 							var lat = parseFloat(String(row.Lat).replace(',', '.'));
@@ -231,7 +231,7 @@
 							  var marker = L.marker([lat, lng], {icon: indoorIcon}).addTo(map);
 							  info += `<b>Typ:</b> Inomhushall<br>`;
 							}else if( row.Typ == "3" ){
-							  var marker = L.marker([lat, lng)], {icon: privateIcon}).addTo(map);
+							  var marker = L.marker([lat, lng], {icon: privateIcon}).addTo(map);
 							  info += `<b>Typ:</b> Privatflygfält eller privatmark<br>`;
 							}else if( row.Typ == "1"){
 							  var marker = L.marker([lat, lng], {icon: fieldIcon}).addTo(map);
