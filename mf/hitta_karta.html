@@ -125,9 +125,9 @@
 	  Tänk på att alla platser inte är öppna för allmänheten och att vissa ligger på privat mark, så ta alltid kontakt med klubben innan ditt besök.
 	
 	  <b>Klicka i kartan för att få mer info.</b>
-	  <img src="images/marker_field.svg" alt="POI Utomhusfält"> Flygfält (Artikel 16)
+	  <img src="images/marker_field.svg" alt="POI Utomhusfält"> Utomhusflyg (Artikel 16)
 	  <img src="images/marker_drone.svg" alt="POI Utomhusfält"> I naturen (Drönarkort)
-	  <img src="images/marker_indoor.svg" alt="POI Inomhushall"> Inomhusflyghall
+	  <img src="images/marker_indoor.svg" alt="POI Inomhushall"> Inomhushall
 	  <img src="images/marker_private.svg" alt="POI Privatfält"> Privatflygfält/mark (Artikel 16)
 	</p>
 	
@@ -235,7 +235,7 @@
 							  info += `<b>Typ:</b> Privatflygfält eller privatmark<br>`;
 							}else if( row.Typ == "1"){
 							  var marker = L.marker([lat, lng], {icon: fieldIcon}).addTo(map);
-							  info += `<b>Typ:</b> Flygfält utomhus (Artikel 16)<br>`;
+							  info += `<b>Typ:</b> Utomhus (Artikel 16)<br>`;
 							}else if( row.Typ == "4"){
 							  var marker = L.marker([lat, lng], {icon: droneIcon}).addTo(map);
 							  info += `<b>Typ:</b>Utomhus, drönarkort krävs<br>`;
